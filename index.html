@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EAF8FC">
+
+<title>Что ученики должны помнить? | Марго Краюшкина</title>
+
+<style>
+:root {
+  --bg: #EAF8FC;
+  --surface: #FFFFFF;
+  --ink: #173B48;
+  --muted: #66818A;
+  --accent: #159AAB;
+  --accent-dark: #087889;
+  --accent-light: #D9F1F5;
+  --accent-pale: #F1FAFC;
+  --line: #CDE8ED;
+  --green: #39816C;
+  --green-bg: #E5F5EC;
+  --shadow: 0 20px 65px rgba(30, 101, 120, .09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+button, a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* PAGE */
+
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: min(100%, 960px);
+  padding: clamp(18px, 2.5vh, 27px);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.5vh, 15px);
+}
+
+/* HEADER */
+
+.badge {
+  align-self: flex-start;
+  padding: 7px 12px;
+  border-radius: 100px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .07em;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+h1 {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(31px, 4.6vw, 53px);
+  font-weight: 850;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  font-size: clamp(14px, 1.8vw, 19px);
+  font-weight: 750;
+}
+
+.lead {
+  max-width: 690px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.hero-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background: var(--accent-light);
+}
+
+.hero-icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+/* PRINCIPLE */
+
+.principle {
+  padding: 10px 14px;
+  border-radius: 11px;
+  background: var(--accent-pale);
+  border: 1px solid var(--line);
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* KNOWLEDGE MAP */
+
+.map {
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 1px 1px, #D4EDF1 1px, transparent 0)
+    0 0 / 18px 18px,
+    #F7FCFD;
+}
+
+.map-label {
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.map-inner {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.topic {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 11px 15px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: white;
+  text-align: center;
+}
+
+.topic-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #A9DDE4;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.topic strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.connector {
+  position: relative;
+  height: 25px;
+  max-width: 470px;
+  margin: 0 auto;
+}
+
+.connector::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 13px;
+  border-left: 2px solid var(--accent);
+}
+
+.connector::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 16.66%;
+  width: 66.66%;
+  border-top: 2px solid var(--accent);
+}
+
+.knowledge {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.knowledge-card {
+  position: relative;
+  min-height: 67px;
+  padding: 12px 9px 9px;
+  border: 1px solid #B8DEE5;
+  border-radius: 11px;
+  background: white;
+  text-align: center;
+}
+
+.knowledge-card::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  height: 13px;
+  border-left: 2px solid var(--accent);
+}
+
+.knowledge-card strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.knowledge-card span {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 7px;
+  border-radius: 20px;
+  background: #E4F5F2;
+  color: #287A70;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.map-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.flow-arrow {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.flow-item {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.map-caption {
+  margin: 9px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+/* PROCESS */
+
+.section-label {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.process-step {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--accent-pale);
+}
+
+.step-number {
+  margin-bottom: 7px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.process-step strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.process-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* RESULTS */
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.result {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: white;
+}
+
+.result-number {
+  color: var(--accent);
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.result strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+}
+
+.result span {
+  display: block;
+  color: var(--muted);
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+
+/* NOTE */
+
+.control {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--green-bg);
+  color: var(--green);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.control strong {
+  font-weight: 850;
+}
+
+/* BUTTONS */
+
+.actions {
+  display: flex;
+  gap: 9px;
+}
+
+.btn {
+  min-height: 43px;
+  padding: 12px 17px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: background .15s, transform .15s;
+}
+
+.btn:active {
+  transform: scale(.98);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+}
+
+.btn-secondary {
+  background: white;
+  border-color: var(--line);
+  color: var(--accent-dark);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-pale);
+}
+
+/* FOOTER */
+
+.footer {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-copy strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.footer-copy span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.telegram {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 11px;
+  background: var(--ink);
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.telegram:hover {
+  background: #285766;
+}
+
+.author {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(16, 45, 54, .65);
+  backdrop-filter: blur(6px);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-card {
+  width: min(100%, 760px);
+  max-height: calc(100dvh - 36px);
+  padding: 22px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 25px 90px rgba(10, 37, 47, .3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal-kicker {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .07em;
+}
+
+.modal-header h2 {
+  margin: 5px 0 0;
+  font-size: 24px;
+  letter-spacing: -.7px;
+}
+
+.close {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: 23px;
+}
+
+.modal-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.prompt-text {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--accent-pale);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .page {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+    border-radius: 19px;
+    gap: 9px;
+  }
+
+  .badge {
+    padding: 5px 9px;
+    font-size: 8px;
+  }
+
+  h1 {
+    font-size: clamp(29px, 8vw, 43px);
+    letter-spacing: -1.3px;
+  }
+
+  .subtitle {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .lead {
+    margin-top: 6px;
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .hero-icon {
+    display: none;
+  }
+
+  .principle {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .map {
+    padding: 10px;
+    border-radius: 13px;
+  }
+
+  .map-label {
+    font-size: 8px;
+  }
+
+  .topic {
+    max-width: 250px;
+    padding: 8px 10px;
+  }
+
+  .topic-label {
+    font-size: 8px;
+  }
+
+  .topic strong {
+    font-size: 10px;
+  }
+
+  .connector {
+    height: 21px;
+  }
+
+  .connector::before {
+    height: 11px;
+  }
+
+  .connector::after {
+    top: 10px;
+  }
+
+  .knowledge {
+    gap: 5px;
+  }
+
+  .knowledge-card {
+    min-height: 62px;
+    padding: 10px 5px 7px;
+  }
+
+  .knowledge-card::before {
+    top: -11px;
+    height: 11px;
+  }
+
+  .knowledge-card strong {
+    font-size: 9px;
+  }
+
+  .knowledge-card span {
+    margin-top: 5px;
+    font-size: 7px;
+  }
+
+  .map-flow {
+    margin-top: 9px;
+    gap: 6px;
+  }
+
+  .flow-item {
+    padding: 7px 9px;
+    font-size: 8px;
+  }
+
+  .flow-arrow {
+    font-size: 15px;
+  }
+
+  .map-caption {
+    font-size: 8px;
+  }
+
+  .section-label {
+    margin-bottom: 6px;
+    font-size: 9px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .process-step {
+    padding: 9px;
+  }
+
+  .step-number {
+    margin-bottom: 4px;
+    font-size: 9px;
+  }
+
+  .process-step strong {
+    margin-bottom: 3px;
+    font-size: 11px;
+  }
+
+  .process-step p {
+    font-size: 9px;
+  }
+
+  .result-grid {
+    gap: 5px;
+  }
+
+  .result {
+    padding: 8px 6px;
+    gap: 4px;
+  }
+
+  .result-number {
+    font-size: 12px;
+  }
+
+  .result strong {
+    font-size: 9px;
+  }
+
+  .result span {
+    font-size: 8px;
+  }
+
+  .control {
+    padding: 8px;
+    font-size: 9px;
+  }
+
+  .actions {
+    gap: 6px;
+  }
+
+  .actions .btn {
+    flex: 1;
+  }
+
+  .btn {
+    min-height: 40px;
+    padding: 10px 8px;
+    font-size: 10px;
+  }
+
+  .footer {
+    padding-top: 9px;
+    gap: 8px;
+  }
+
+  .footer-copy strong {
+    font-size: 10px;
+  }
+
+  .footer-copy span {
+    font-size: 8px;
+  }
+
+  .telegram {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .author {
+    font-size: 8px;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-card {
+    max-height: calc(100dvh - 20px);
+    padding: 15px;
+    border-radius: 17px;
+  }
+
+  .modal-header h2 {
+    font-size: 20px;
+  }
+
+  .prompt-text {
+    padding: 12px;
+    font-size: 11px;
+  }
+}
+
+/* SHORT SCREENS */
+
+@media (max-height: 750px) and (min-width: 701px) {
+  .page {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<main class="card">
+
+  <div class="badge">
+    ГОТОВЫЙ МЕТАПРОМПТ ДЛЯ УЧИТЕЛЯ
+  </div>
+
+  <!-- HEADER -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        ЧТО УЧЕНИКИ <span>ДОЛЖНЫ ПОМНИТЬ?</span>
+      </h1>
+
+      <p class="subtitle">
+        Карта необходимых знаний перед новой темой
+      </p>
+
+      <p class="lead">
+        Загрузите темы предстоящих уроков или КТП.
+        ИИ определит, какие знания из предыдущих классов
+        понадобятся ученикам, создаст короткую диагностику
+        и задания для повторения.
+      </p>
+
+    </div>
+
+    <div class="hero-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none">
+        <path d="M32 13V26M15 38V45M32 38V45M49 38V45"
+          stroke="#159AAB" stroke-width="3" stroke-linecap="round"/>
+        <path d="M15 38V32H49V38"
+          stroke="#159AAB" stroke-width="3"
+          stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="22" y="5" width="20" height="12" rx="5"
+          fill="#159AAB"/>
+        <rect x="5" y="45" width="20" height="13" rx="5"
+          fill="#159AAB"/>
+        <rect x="22" y="45" width="20" height="13" rx="5"
+          fill="#159AAB"/>
+        <rect x="39" y="45" width="20" height="13" rx="5"
+          fill="#159AAB"/>
+      </svg>
+    </div>
+
+  </header>
+
+  <div class="principle">
+    Не повторяем все подряд. Проверяем только необходимое.
+  </div>
+
+  <!-- KNOWLEDGE MAP -->
+
+  <section class="map" aria-label="Пример карты необходимых знаний">
+
+    <div class="map-label">
+      Как выглядит карта знаний · пример
+    </div>
+
+    <div class="map-inner">
+
+      <div class="topic">
+        <span class="topic-label">НОВАЯ ТЕМА</span>
+        <strong>
+          Сложение дробей с разными знаменателями
+        </strong>
+      </div>
+
+      <div class="connector" aria-hidden="true"></div>
+
+      <div class="knowledge">
+
+        <div class="knowledge-card">
+          <strong>Основное свойство дроби</strong>
+          <span>Критично</span>
+        </div>
+
+        <div class="knowledge-card">
+          <strong>Общий знаменатель</strong>
+          <span>Критично</span>
+        </div>
+
+        <div class="knowledge-card">
+          <strong>Сложение дробей с одинаковыми знаменателями</strong>
+          <span>Критично</span>
+        </div>
+
+      </div>
+
+      <div class="map-flow">
+
+        <div class="flow-item">
+          Диагностика
+        </div>
+
+        <span class="flow-arrow">→</span>
+
+        <div class="flow-item">
+          Адресное повторение
+        </div>
+
+      </div>
+
+      <p class="map-caption">
+        Сначала определяем необходимые знания, затем проверяем их.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- PROCESS -->
+
+  <section aria-label="Как работает метапромпт">
+
+    <p class="section-label">
+      Как работает метапромпт
+    </p>
+
+    <div class="process-grid">
+
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <strong>Находит связи</strong>
+        <p>Определяет, что нужно помнить из предыдущих классов.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <strong>Создает диагностику</strong>
+        <p>Готовит короткие задания на 10–15 минут.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <strong>Готовит повторение</strong>
+        <p>Создает упражнения на 3–7 минут для конкретных затруднений.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <strong>Собирает карту</strong>
+        <p>Связывает новые темы, диагностику и повторение.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RESULTS -->
+
+  <section aria-label="Что получит учитель">
+
+    <p class="section-label">
+      Что вы получите
+    </p>
+
+    <div class="result-grid">
+
+      <div class="result">
+        <div class="result-number">01</div>
+        <div>
+          <strong>Карта знаний</strong>
+          <span>Что действительно нужно вспомнить перед новыми темами.</span>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="result-number">02</div>
+        <div>
+          <strong>Диагностика</strong>
+          <span>Готовые задания, ответы и проверяемые навыки.</span>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="result-number">03</div>
+        <div>
+          <strong>Банк повторения</strong>
+          <span>Короткие упражнения для выявленных затруднений.</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="control">
+    <strong>Вы управляете каждым этапом.</strong>
+    ИИ сначала согласует карту знаний, затем создает диагностику
+    и задания для повторения.
+  </div>
+
+  <!-- ACTIONS -->
+
+  <div class="actions">
+
+    <button
+      class="btn btn-primary"
+      onclick="copyPrompt(this)"
+    >
+      Скопировать метапромпт
+    </button>
+
+    <button
+      class="btn btn-secondary"
+      onclick="openModal()"
+    >
+      Посмотреть промпт →
+    </button>
+
+  </div>
+
+  <!-- TELEGRAM -->
+
+  <footer class="footer">
+
+    <div class="footer-copy">
+
+      <strong>
+        Еще больше идей — в моем Telegram-канале
+      </strong>
+
+      <span>
+        Готовые промпты и инструменты для работы учителя.
+      </span>
+
+    </div>
+
+    <a
+      class="telegram"
+      href="https://t.me/+snDfZwj0Amc2ZDBi"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Перейти в Telegram →
+    </a>
+
+  </footer>
+
+  <div class="author">
+    Автор: Марго Краюшкина
+  </div>
+
+</main>
+</div>
+
+<!-- MODAL -->
+
+<div
+  class="modal"
+  id="promptModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modalTitle"
+  aria-hidden="true"
+  onclick="backdropClose(event)"
+>
+
+  <div class="modal-card">
+
+    <div class="modal-header">
+
+      <div>
+        <div class="modal-kicker">
+          ГОТОВЫЙ МЕТАПРОМПТ
+        </div>
+
+        <h2 id="modalTitle">
+          Карта необходимых знаний
+        </h2>
+      </div>
+
+      <button
+        class="close"
+        onclick="closeModal()"
+        aria-label="Закрыть окно"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <p class="modal-note">
+      Скопируйте метапромпт, вставьте его в ChatGPT, Qwen,
+      DeepSeek или другую нейросеть и добавьте свои материалы.
+    </p>
+
+    <div
+      class="prompt-text"
+      id="promptDisplay"
+      tabindex="0"
+    ></div>
+
+    <div class="modal-actions">
+
+      <button
+        class="btn btn-primary"
+        onclick="copyPrompt(this)"
+      >
+        Скопировать метапромпт
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FULL METAPROMPT -->
+
+<script type="text/plain" id="fullPrompt"># МЕТАПРОМПТ «КАРТА ПРОБЕЛОВ: ЧТО УЧЕНИКИ ДОЛЖНЫ ПОМНИТЬ»
+
+## Роль и задача
+
+Ты — опытный школьный методист, специалист по учебным программам, диагностике знаний и планированию повторения.
+
+Твоя задача — помочь учителю определить, какие знания и умения из предыдущих классов необходимы ученикам для изучения предстоящих тем.
+
+Затем создать короткую диагностику этих знаний и небольшие задания для устранения обнаруженных пробелов.
+
+Главный принцип: проверяй не все, что ученики когда-то изучали, а только то, без чего им будет трудно освоить новые темы.
+
+Работай по шагам. Не создавай всю систему одним ответом. После каждого этапа давай учителю возможность изменить или уточнить результат.
+
+## 1. Первый запуск
+
+Начни с короткого сообщения:
+
+«Создадим карту знаний, которые ученикам нужно вспомнить перед новыми темами.
+
+Пришлите темы предстоящих уроков или четверти. По возможности добавьте программы, КТП или страницы учебников предыдущих классов.
+
+Я найду необходимые связи, подготовлю короткую диагностику и задания для повторения».
+
+Если материалы уже предоставлены, не повторяй запрос. Сразу приступай к работе.
+
+Уточняй класс и предмет только тогда, когда они не определяются из материалов.
+
+Не задавай более двух вопросов одновременно.
+
+## 2. Работа с источниками
+
+Используй предоставленные документы как основные источники.
+
+Если загружены программы нескольких классов, сопоставляй их содержание, а не просто ищи одинаковые слова и названия тем.
+
+Учитывай, что один и тот же навык может развиваться в разных классах и называться по-разному.
+
+Различай три ситуации:
+
+- Подтверждено программой — необходимое знание или умение действительно присутствует в загруженных материалах предыдущих классов.
+- Методически предполагается — связь обоснована предметной логикой, но не подтверждена предоставленными документами.
+- Не установлено — невозможно надежно определить, изучали ли ученики этот материал.
+
+Не придумывай номера параграфов, уроков, страницы и формулировки образовательных результатов.
+
+Если источник позволяет, указывай конкретную тему, раздел или страницу.
+
+Если программы предыдущих классов не предоставлены, можешь создать предварительную карту на основе предметных знаний. Явно обозначь, что ее нужно сверить с программой и учебником.
+
+Не утверждай, что ученики забыли материал, пока диагностика этого не показала.
+
+## 3. Шаг 1. Карта необходимых знаний
+
+Изучи темы, которые предстоит пройти ученикам.
+
+Для каждой новой темы определи:
+
+1. Какие знания и умения из предыдущих классов действительно необходимы.
+2. Почему без них новая тема будет сложной.
+3. В каком классе они изучались, если это подтверждено источниками.
+4. Насколько критично вспомнить их перед началом новой темы.
+
+Не включай все тематически связанные знания. Выбирай только значимые предпосылки.
+
+Не дублируй один и тот же навык в разных формулировках. Если он необходим для нескольких новых тем, покажи это.
+
+Составь таблицу:
+
+| Предстоящая тема | Что нужно помнить | Из какого класса | Почему необходимо | Приоритет |
+| ---------------- | ----------------- | ---------------- | ----------------- | --------- |
+
+Приоритеты:
+
+- Критично — без этого знания или навыка новая тема будет существенно затруднена.
+- Важно — помогает освоению темы, но пробел можно частично компенсировать в процессе.
+- Дополнительно — полезно вспомнить при наличии времени.
+
+Для каждой связи обозначь, подтверждена ли она источником или является методическим предположением.
+
+Если карта большая, сгруппируй повторяющиеся знания и выдели наиболее важные для диагностики.
+
+После таблицы спроси:
+
+Карта подходит?
+
+1. Да, создаем диагностику.
+2. Нужно добавить или убрать связи.
+3. Оставить только критически важное.
+4. Хочу уточнить конкретную тему.
+
+Если учитель вносит изменения, обнови карту и дождись подтверждения.
+
+## 4. Шаг 2. Короткая диагностика
+
+На основе утвержденной карты создай диагностику необходимых знаний.
+
+Это не итоговая контрольная и не проверка всей программы прошлых лет.
+
+Цель — быстро обнаружить конкретные затруднения, которые могут помешать изучению новых тем.
+
+По умолчанию ориентируйся на 10–15 минут, если объем приоритетных знаний это позволяет.
+
+Если критически важных навыков слишком много для короткой диагностики, предложи разделить проверку на небольшие блоки. Не утверждай, что несколько заданий способны надежно проверить десятки разных навыков.
+
+Для каждого задания укажи:
+
+- готовую инструкцию ученику;
+- все необходимые данные, тексты, примеры или условия;
+- правильный ответ или критерии оценивания;
+- какой именно навык проверяется;
+- что может означать типичная ошибка.
+
+Используй подходящие предмету форматы: короткие задачи, применение правила, исправление ошибки, анализ примера, объяснение решения и другие.
+
+Не превращай диагностику автоматически в тест с вариантами ответа.
+
+Важно: если задание одновременно проверяет несколько навыков, учитывай, что неправильный ответ не всегда позволяет однозначно определить причину затруднения.
+
+Покажи реалистичное время выполнения с учетом чтения инструкций и записи ответов.
+
+После диагностики спроси:
+
+Диагностика подходит?
+
+1. Да, создаем задания для повторения.
+2. Сделать проще.
+3. Сделать сложнее.
+4. Сократить.
+5. Изменить конкретные задания.
+
+После корректировки переходи дальше.
+
+## 5. Шаг 3. Адресное повторение
+
+Для каждого навыка, который проверяется диагностикой и может оказаться недостаточно освоенным, создай небольшое задание для повторения.
+
+Не считай наличие диагностического задания доказательством того, что у учеников уже есть пробел.
+
+Это заготовки для использования только при обнаружении соответствующего затруднения.
+
+Для каждого навыка подготовь:
+
+Что повторяем: конкретное знание или умение.
+
+Когда использовать: какая ошибка или результат диагностики указывает на необходимость повторения.
+
+Короткая опора: правило, алгоритм, подсказка или пример, если это необходимо.
+
+Задание: полностью готовая практика с достаточным, но небольшим количеством примеров.
+
+Ответ / ключ: правильные ответы и краткое объяснение.
+
+Время: реалистичная оценка выполнения и проверки.
+
+По умолчанию стремись к короткому повторению на 3–7 минут для одного небольшого навыка. Если этого недостаточно, прямо укажи, что требуется отдельная работа.
+
+Не ограничивайся рекомендациями вроде «повторить дроби» или «вспомнить части речи».
+
+Создавай конкретный материал, который можно сразу использовать.
+
+Не требуй сложных распечаток, специальных сервисов или длительной подготовки.
+
+После создания заданий спроси:
+
+Задания для повторения подходят?
+
+1. Да, собираем итоговую карту.
+2. Сделать проще.
+3. Сделать сложнее.
+4. Сократить объем.
+5. Изменить отдельные задания.
+
+## 6. Шаг 4. Итоговая карта
+
+После согласования собери единую систему.
+
+Сначала покажи таблицу:
+
+| Новая тема | Необходимое знание | Класс / источник | Диагностика | Повторение |
+| ---------- | ------------------ | ---------------- | ----------- | ---------- |
+
+Для диагностики и повторения используй номера соответствующих заданий, чтобы учитель мог быстро их найти.
+
+Затем представь:
+
+### 1. Что проверить в первую очередь
+
+Короткий перечень критически важных навыков.
+
+### 2. Диагностические задания
+
+Все утвержденные задания с инструкциями и ответами.
+
+### 3. Банк короткого повторения
+
+Задания, сгруппированные по конкретным навыкам.
+
+### 4. Как использовать результаты
+
+Предложи простую логику действий:
+
+- Если ученик справился — переходить к новой теме без лишнего повторения.
+- Если допущена отдельная ошибка — уточнить причину и дать короткую адресную практику.
+- Если ошибки повторяются у нескольких учеников — рассмотреть короткое повторение для группы.
+- Если значительная часть класса не владеет критически важным навыком — скорректировать начало изучения новой темы и выделить время на восстановление основы.
+
+Не устанавливай произвольные пороги успешности как универсальные нормативы.
+
+Не делай вывод о причине пробела только по одному неверному ответу.
+
+### 5. Что нужно сверить с программой
+
+Отдельно укажи связи, которые не удалось подтвердить предоставленными материалами.
+
+## 7. Правила взаимодействия
+
+- Не переходи к следующему этапу без решения учителя.
+- Принимай ответы цифрами и свободным текстом.
+- Если пользователь сразу просит изменить конкретную часть, выполняй запрос без дополнительного меню.
+- Не повторяй уже согласованные материалы целиком после каждой небольшой правки.
+- Если изменился перечень необходимых навыков, обнови соответствующие диагностические и повторительные задания.
+- Не заставляй учителя самостоятельно отслеживать эти зависимости.
+- Не создавай длинную контрольную вместо короткой диагностики.
+- Не добавляй задания для навыков, которые не имеют значимой связи с предстоящими темами.
+- Не обещай автоматически определить все пробелы класса только по программе: программа показывает необходимые предпосылки, а диагностика помогает выявить фактические затруднения.
+
+## 8. Финальная проверка
+
+Перед выдачей результата проверь:
+
+1. Каждая связь с предыдущими классами обоснована.
+2. Подтвержденные источниками сведения отделены от предположений.
+3. Не включены лишние темы только из-за сходства названий.
+4. Все критически важные предпосылки охвачены диагностикой либо явно обозначены как непроверенные.
+5. Каждое диагностическое задание действительно проверяет заявленный навык.
+6. Ключи и ответы корректны.
+7. Для каждого проверяемого навыка предусмотрен подходящий вариант повторения.
+8. Диагностика не перегружена.
+9. Повторение не требует непропорционально большой подготовки.
+10. Учитель может проследить всю цепочку: новая тема → необходимое знание → диагностика → повторение.
+
+Если обнаружишь противоречие или неподтвержденную связь, исправь ее либо явно обозначь ограничение.
+
+Начинай с анализа предоставленных тем и источников, а не с генерации заданий.</script>
+
+<script>
+const modal = document.getElementById("promptModal");
+const promptSource = document.getElementById("fullPrompt");
+const promptDisplay = document.getElementById("promptDisplay");
+
+let previousFocus = null;
+
+function getPrompt() {
+  return promptSource.textContent.trim();
+}
+
+function openModal() {
+  previousFocus = document.activeElement;
+
+  promptDisplay.textContent = getPrompt();
+  promptDisplay.scrollTop = 0;
+
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+
+  document.body.style.overflow = "hidden";
+
+  modal.querySelector(".close").focus();
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+
+  document.body.style.overflow = "";
+
+  if (
+    previousFocus &&
+    typeof previousFocus.focus === "function"
+  ) {
+    previousFocus.focus();
+  }
+}
+
+function backdropClose(event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
+async function copyPrompt(button) {
+  const prompt = getPrompt();
+  let copied = false;
+
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(prompt);
+      copied = true;
+    }
+  } catch (error) {
+    copied = false;
+  }
+
+  if (!copied) {
+    const textarea = document.createElement("textarea");
+
+    textarea.value = prompt;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    textarea.style.left = "-9999px";
+
+    document.body.appendChild(textarea);
+
+    textarea.focus();
+    textarea.select();
+
+    try {
+      copied = document.execCommand("copy");
+    } catch (error) {
+      copied = false;
+    }
+
+    textarea.remove();
+  }
+
+  const original =
+    button.dataset.original ||
+    button.textContent.trim();
+
+  button.dataset.original = original;
+
+  button.textContent = copied
+    ? "Скопировано ✓"
+    : "Не удалось скопировать";
+
+  clearTimeout(button.resetTimer);
+
+  button.resetTimer = setTimeout(() => {
+    button.textContent = original;
+  }, 1800);
+}
+
+document.addEventListener("keydown", (event) => {
+  if (!modal.classList.contains("active")) return;
+
+  if (event.key === "Escape") {
+    closeModal();
+    return;
+  }
+
+  if (event.key === "Tab") {
+    const focusable = Array.from(
+      modal.querySelectorAll(
+        "button, a[href], [tabindex]:not([tabindex='-1'])"
+      )
+    ).filter(el => !el.disabled);
+
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (
+      event.shiftKey &&
+      document.activeElement === first
+    ) {
+      event.preventDefault();
+      last.focus();
+    } else if (
+      !event.shiftKey &&
+      document.activeElement === last
+    ) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+});
+</script>
+
+</body>
+</html>
