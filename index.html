@@ -1063,7 +1063,7 @@ h1 span {
 
     <a
       class="telegram"
-      href="https://t.me/+9G7Mea2S2u8wYWEy"
+      href="https://t.me/+snDfZwj0Amc2ZDBi" data-tg
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -1523,5 +1523,19 @@ document.addEventListener("keydown", (event) => {
 });
 </script>
 
+<script>
+  /* ===== ССЫЛКИ НА TELEGRAM ПО ПЛОЩАДКАМ =====
+     Таплинк передает площадку в адресе: ...?from=tiktok / insta / youtube
+     Без метки остается ссылка insta. Чтобы добавить площадку, допишите строку. */
+  var TG_LINKS = {
+    insta: 'https://t.me/+snDfZwj0Amc2ZDBi',
+    tiktok: 'https://t.me/+9G7Mea2S2u8wYWEy'
+  };
+  (function(){
+    var from = (new URLSearchParams(location.search).get('from') || '').toLowerCase();
+    if (!TG_LINKS[from]) return;
+    document.querySelectorAll('a[data-tg]').forEach(function(a){ a.href = TG_LINKS[from]; });
+  })();
+</script>
 </body>
 </html>
